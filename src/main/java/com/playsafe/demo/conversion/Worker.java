@@ -1,5 +1,6 @@
 package com.playsafe.demo.conversion;
 
+@Component
 public class Worker implements ConversionApi{
 
     private final double KILO = 1.609;

@@ -2,8 +2,8 @@ package com.playsafe.demo.conversion;
 
 public interface ConversionApi {
 
-    ResponseEntity<Void>convertKelvin() throws Exception;
-    ResponseEntity<Void>convertCelsius() throws Exception;
-    ResponseEntity<Void>convertKilo() throws Exception;
-    ResponseEntity<Void>convertMiles() throws Exception;
+    ResponseEntity<Float>convertToCelcius(Integer kelvin) throws Exception;
+    ResponseEntity<Float>convertToKelvin(Integer celsius) throws Exception;
+    ResponseEntity<Integer>convertToMiles(Integer kilo) throws Exception;
+    ResponseEntity<Integer>convertToKilo(Integer miles) throws Exception;
 }

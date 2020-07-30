@@ -13,7 +13,7 @@ public class ConversionController implements ConversionApi{
 
     @Override
     @RequestMapping(path = "/conversions/ktoc", method = RequestMethod.GET, produces = { "application/json" })
-    public ResponseEntity<Float> convertToCelcius(Integer kelvin) throws Exception {
+    public float convertToCelcius(int kelvin) throws Exception {
         logger.trace("Produces results in celsius()");
 
         return worker.convertToCelcius(kelvin);
@@ -21,7 +21,7 @@ public class ConversionController implements ConversionApi{
 
     @Override
     @RequestMapping(path = "/conversions/ctoc", method = RequestMethod.GET, produces = { "application/json" })
-    public ResponseEntity<Float> convertToKelvin(Integer celsius) throws Exception {
+    public float convertToKelvin(int celsius) throws Exception {
         logger.trace("Produces results in Kelvin()");
 
         return worker.convertToKelvin(celsius);
@@ -29,7 +29,7 @@ public class ConversionController implements ConversionApi{
 
     @Override
     @RequestMapping(path = "/conversions/ktom", method = RequestMethod.GET, produces = { "application/json" })
-    public ResponseEntity<Integer> convertToMiles(Integer kilo) throws Exception {
+    public double convertToMiles(int kilo) throws Exception {
         logger.trace("Produces results in Miles()");
 
         return worker.convertToMiles(kilo);
@@ -37,7 +37,7 @@ public class ConversionController implements ConversionApi{
 
     @Override
     @RequestMapping(path = "/conversions/mtok", method = RequestMethod.GET, produces = { "application/json" })
-    public ResponseEntity<Integer> convertToKilo(Integer miles) throws Exception {
+    public double convertToKilo(int miles) throws Exception {
         logger.trace("Produces results in Kilo()");
 
         return worker.convertToKilo;
